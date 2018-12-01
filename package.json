@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
     "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
@@ -13,8 +16,13 @@
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2"
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
   "scripts": {
     "lint": "eslint js",
-    "dev": "webpack --mode development ./js/index.js"
+    "dev": "webpack --mode development"
   }
 }
